@@ -31,7 +31,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className={` shadow-sm w-full mx-auto px-4 sm:px-6 text-xl fixed md:px-16 lg:px-32 ${isScrolled?" bg-white/70 backdrop-blur-sm shadow-md":"bg-transparent"}`}>
+    <header className={`z-10 shadow-sm w-full mx-auto px-4 sm:px-6 text-xl fixed md:px-16 lg:px-32 ${isScrolled?" bg-white/70 backdrop-blur-sm shadow-md":"bg-transparent"}`}>
       <div className=" flex items-center justify-between h-16">
         {/* Left: Logo and Navigation Links */}
         {/* Logo */}
