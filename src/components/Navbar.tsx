@@ -1,4 +1,6 @@
+"use client";
 
+import { useState, useEffect } from "react";
 
 import { BsPersonExclamation } from "react-icons/bs";
 import { FiSearch } from "react-icons/fi";
@@ -17,9 +19,19 @@ import CartDropDown from "@/components/CartDropDown"
 
 export default function Navbar() {
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className=" shadow-sm w-full mx-auto px-4 sm:px-6 text-xl fixed bg-transparent  md:px-16 lg:px-32">
+    <header className={` shadow-sm w-full mx-auto px-4 sm:px-6 text-xl fixed md:px-16 lg:px-32 ${isScrolled?" bg-white/70 backdrop-blur-sm shadow-md":"bg-transparent"}`}>
       <div className=" flex items-center justify-between h-16">
         {/* Left: Logo and Navigation Links */}
         {/* Logo */}
