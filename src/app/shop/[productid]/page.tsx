@@ -150,6 +150,57 @@ export default async function ProductDetail({
             </div>
           </div>
         </div>
+
+        <hr className="text-[#FFFFFF] w-full my-2 mb-8 " />
+        <div className="my-10 text-center">
+  {/* Navigation Links */}
+  <div className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 text-[14px] sm:text-[16px] md:text-[18px] font-medium text-[#9F9F9F]">
+    <p className="text-black font-semibold cursor-pointer hover:underline">Description</p>
+    <p className="cursor-pointer hover:underline">Additional Information</p>
+    <p className="cursor-pointer hover:underline">Reviews [5]</p>
+  </div>
+
+  {/* Description Section */}
+  <div className="grid gap-6 mt-6 text-[#9F9F9F] text-[14px] leading-[22px] sm:text-[16px] sm:leading-[26px] md:text-[18px] md:leading-[30px] px-4 sm:px-8 md:px-16 lg:px-24">
+    <p>
+      Embodying the raw, wayward spirit of rock n roll, the Kilburn portable active stereo speaker takes the unmistakable
+      look and sound of Marshall, unplugs the chords, and takes the show on the road.
+    </p>
+    <p>
+      Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering.
+      Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted
+      hero with a well-balanced audio that boasts a clear midrange and extended highs for a sound that is
+      both articulate and pronounced. The analogue knobs allow you to fine-tune the controls to your
+      personal preferences, while the guitar-influenced leather strap enables easy and stylish travel.
+    </p>
+  </div>
+
+  {/* Image Section */}
+  <div className="flex flex-col md:flex-row gap-6 mt-12">
+    <div className="flex-1 flex justify-center items-center bg-[#FFF9E5] p-4 rounded-lg shadow-md">
+      <Image
+        className="max-w-full h-auto object-contain"
+        src="/cloudsofa.png"
+        alt="Mayur Sofa"
+        width={300}
+        height={200}
+        priority
+      />
+    </div>
+    <div className="flex-1 flex justify-center items-center bg-[#FFF9E5] p-4 rounded-lg shadow-md">
+      <Image
+        className="max-w-full h-auto object-contain"
+        src="/hersofa.png"
+        alt="Mayur Sofa"
+        width={300}
+        height={200}
+        priority
+      />
+    </div>
+  </div>
+</div>
+
+
       </div>
 
       <ShortSec title="More Products" />
