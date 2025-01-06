@@ -1,6 +1,7 @@
 import Card from "@/components/Card";
 import { SecData } from "@/utils/secData";
 import { secData } from "@/utils/secData";
+import Link from "next/link";
 
 export interface Sectiondata {
     title:string,
@@ -16,7 +17,9 @@ export default function ShortSec(data:Sectiondata) {
         {data.description && <p className="text-sm text-gray-600">{data.description}</p>}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {secData.map((cardData: SecData, index) => (
+          <Link href={`/shop/${index +1}`}>
             <Card key={index} {...cardData} />
+          </Link>
           ))}
         </div>
         <div>
